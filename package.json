@@ -1,0 +1,24 @@
+{
+  "name": "poker-mavens-api-node-examples",
+  "version": "1.0.0",
+  "description": "A Node.js server showing API examples taken from the Poker Mavens docs. The original versions are all in PHP but I thought an alternative JavaScript/Node.js version could be helpful",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Poker Mavens",
+    "Node.js",
+    "Express.js",
+    "Handlebars"
+  ],
+  "author": "Harry Baldwin",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "node-fetch": "^2.6.0"
+  }
+}

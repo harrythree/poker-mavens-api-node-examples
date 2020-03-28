@@ -1,0 +1,36 @@
+<div>
+  {{#if error.message}}
+    <div>Error: {{error.message}}</div>
+    <div>Click Back Button to correct.</div>
+  {{/if}}
+
+  {{#if message}}
+    <div>{{message}}</div>
+  {{/if}}
+
+  {{#unless error.message}}
+    <h3>Create New Account</h3>
+    <form method="post">
+      <table>
+        <tr><td>Your player name:</td><td><input type="text" name="Player" /></td></tr>
+        <tr><td>Your real name:</td><td><input type="text" name="RealName" /></td></tr>
+        <tr><td>Your gender:</td><td><input type="radio" name="Gender" Value="Male" checked>Male &nbsp; 
+        <input type="radio" name="Gender" Value="Female">Female</td></tr>
+        <tr><td>Your location:</td><td><input type="text" name="Location" /></td></tr>
+        <tr><td>Select a password:</td><td><input type="password" name="Password1" /></td></tr>
+        <tr><td>Confirm password:</td><td><input type="password" name="Password2" /></td></tr>
+        <tr><td>Your email address:</td><td><input type="text" name="Email" /></td></tr>
+        <tr><td>Your avatar:</td><td>
+        <div style="width: 100px; height: 175px; overflow: auto; border: solid 2px">
+          {{#each avatars}}
+            <input type="radio" name="Avatar" value={{this.value}} {{this.checked}}>
+            <div style="{{this.style}}"></div>
+            <br><br>
+          {{/each}}
+        </div>
+      </td></tr>
+      </table>
+      <input type="submit" name="Submit" value="Submit" />
+    </form>
+  {{/unless}}
+</div>

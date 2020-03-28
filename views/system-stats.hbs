@@ -1,0 +1,14 @@
+<div>
+  <h3>Poker Server Status</h3>
+
+  {{#if error.message}}
+    <div>Error: {{error.message}}</div>
+  {{/if}}
+
+  {{#unless error.message}}
+    <div>Logins: {{Logins}}</div>
+    <div>Filled Seats: {{FilledSeats}}</div>
+    <div>Occupied Tables: {{OccupiedTables}}</div>
+    <div>Up Time: {{UpTime}}</div>
+  {{/unless}}
+</div>
